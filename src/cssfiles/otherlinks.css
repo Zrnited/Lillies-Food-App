@@ -1,0 +1,46 @@
+.other-links {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    color: white;
+}
+
+.sublinks a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.other-links h2 {
+    margin-bottom: 10px;
+}
+
+.sublinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 3px 0px;
+}
+
+.sublinks li {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .sublinks li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .other-links h2 {
+       font-size: 20px;
+    }
+
+    .sublinks {
+        margin-top: 8px;
+    }
+
+    .other-links {
+        text-align: center;
+    }
+}

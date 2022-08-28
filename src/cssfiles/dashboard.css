@@ -1,0 +1,244 @@
+/* LEFT HAND SIDE */
+.dashboard-nav {
+    display: none;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dashboard-navigation {
+    width: 275px;
+    background-color: #FBFBFB;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    place-content: center;
+    /* background-color: brown; */
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.dashboard-header img {
+    height: 40px;
+    width: auto;
+}
+
+.dashboard-header h1{
+    margin: 0px 0px;
+    font-size: 33px;
+}
+
+/* PHASE TWO */
+.dashboard-links {
+    /* background-color: darkred; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 5px 20px;
+    /* text-align: center; */
+}
+
+.dashboard-links ul {
+    list-style: none;
+    padding: 15px 0px;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+}
+
+.dashboard-links ul li {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+.dashboard-links ul li:hover {
+    background-color: #EFEFEF;
+}
+
+.dashboard-links ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.dashboard-links ul li i{
+    margin: 0px 10px;
+}
+
+/* RIGHT HAND SIDE */
+.dashboard-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 45px 0px;
+    padding: 20px 20px;
+    margin-left: 280px;
+    /* background-color: cadetblue; */
+}
+
+.dashboard-greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: red; */
+    align-items: center;
+}
+
+.dashboard-greeting h2 {
+    color: #00302E;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.dashboard-greeting p {
+    margin: 0px 0px;
+    font-size: 16px;
+}
+
+/* NEXT PHASE */
+.dashboard-menus-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px 25px;
+    flex-wrap: wrap;
+    /* background-color: chartreuse; */
+    padding-left: 30px;
+    justify-content: left;
+}
+
+.dashboard-food-card {
+    width: 240px;
+    height: 100%;
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.dashboard-food-card:hover{
+    background-color: #f1efef;
+    transition: 830ms;
+    box-shadow: 0px 0px 5px 2px rgba(218, 213, 213, 0.8);
+}
+
+.dashboard-menu-card-img {
+    width: 120px;
+    height: 120px;
+}
+
+.dashboard-menu-img {
+    width: 100%;
+    height: 100%;
+}
+
+.menucard-action-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.dashboard-food-card p, h2, h3 {
+    margin: 0px;
+}
+
+/* toggling the navbar */
+.dashboard-navigation.active {
+    display: block;
+    left: 0;
+    border-radius: 0px;
+    width: 50%;
+    z-index: 200;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:890px) {
+    .dashboard-navigation {
+        left: -100%;
+    }
+
+    .dashboard-items {
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+
+    .dashboard-greeting {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dashboard-menus-card-container{
+        place-content: center;
+        justify-content: space-evenly;
+        padding: 0px 20px;
+    }
+
+    .dashboard-nav {
+        display: block;
+        padding: 10px;
+        background-color: #00302E;
+        text-align: end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    .dashboard-nav button {
+        background-color: #00302E;
+        color: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
+
+/* ADJUSTING TEXTS */
+@media screen and (max-width:500px) {
+    .dashboard-greeting h2 {
+        font-size: 17px;
+    }
+    
+    .dashboard-greeting p {
+        font-size: 13px;
+    }
+
+    .dashboard-links ul li {
+        font-size: 14px;
+        padding: 8px 0px;
+        font-weight: 600;
+    }
+
+    .dashboard-header {
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+
+    .dashboard-header h1{
+        font-size: 20px;
+    }
+
+    .dashboard-header img {
+        height: 25px;
+    }
+}
+
