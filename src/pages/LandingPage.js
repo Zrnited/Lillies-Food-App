@@ -19,8 +19,10 @@ import OtherLinksComponent from '../components/OtherLinksComponent';
 import MenuBarsComponent from '../components/MenuBarsComponent';
 
 const LandingPage = () => {
+
+
   return (
-    <>
+    <div style={{overflowY: 'visible'}}>
     {/* HEADER STARTS */}
     <header>
         <nav>
@@ -122,7 +124,7 @@ const LandingPage = () => {
     </footer>
 
     {/* FOOTER ENDS */}
-    </>
+    </div>
   )
 }
 

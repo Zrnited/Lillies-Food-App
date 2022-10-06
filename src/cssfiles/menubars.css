@@ -21,7 +21,7 @@
     /* align-items: flex-start; */
 }
 
-.nav-menu .close-btn{
+.nav-menu .close-btn-homepage{
     align-self: flex-end;
     background-color: #00302E;
     color: #fff;

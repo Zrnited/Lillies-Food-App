@@ -1,0 +1,90 @@
+body.active-modal-checkout {
+    overflow-y: hidden;
+}
+
+
+.modal-checkout, .overlay-checkout {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay-checkout {
+    background-color: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content-checkout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* transform: translate(-50%, -50%); */
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.checkout-title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 33px;
+    color: #00302E;
+    margin-bottom: 18px;
+}
+
+.checkout-form {
+    width: 90%;
+}
+
+.checkout-form input {
+    height: 50px;
+}
+
+.checkout-form button {
+    height: 50px;
+    border-radius: 0px;
+}
+
+.checkout-form input::placeholder{
+    font-size: 14px;
+}
+
+@media screen and (max-width:890px) {
+    .modal-content-checkout  {
+        padding-top: 58px;
+        width: 60%;
+    }
+
+    .checkout-form {
+        gap: 20px 0px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .checkout-title {
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    .checkout-form input {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .modal-content-checkout {
+        justify-content: flex-start;
+    }
+}

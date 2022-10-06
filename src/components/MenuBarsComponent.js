@@ -20,7 +20,7 @@ const MenuBarsComponent = () => {
         </button>
 
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-            <button className='close-btn'onClick={showSidebar}>
+            <button className='close-btn-homepage' onClick={showSidebar}>
                 <AiOutlineClose/>
             </button>
             <ul className='nav-menu-items' onClick={showSidebar}>

@@ -7,10 +7,7 @@ import Lillieslogo from '../assets/Lillieslogo.png';
 const SignIn = () => {
 
   const [passwordType, setpasswordType] = useState("password");
-  const [passwordinputType, setpasswordInputType] = useState("");
-  const handlepassword = (e) => {
-    setpasswordInputType(e.target.value);
-  }
+  
 
   const TogglePassword = (e) => {
     e.preventDefault();
@@ -43,7 +40,6 @@ const SignIn = () => {
         ...form,
         [e.target.name]: e.target.value
       })
-      console.log(form);
     }
 
   //2. A function to submit the data i.e save and store the data in your computer
@@ -63,7 +59,7 @@ const SignIn = () => {
   return (
     <>
       <div className='body'>
-        <div className='pic-container'>
+        <div className='pic-container-signup'>
           <img src={signuppic} alt="login-pix"/>
         </div>
 
@@ -84,7 +80,7 @@ const SignIn = () => {
             <input type={'textbox'} placeholder={'Your email address'} name='email' onChange={handleChange} required/>
             <input id='password-input' type={passwordType} placeholder={'Your password'} name='password' onChange={handleChange} required/>
             <p className='show' onClick={TogglePassword}>show</p>
-            <button>SIGN IN</button>
+            <button>SIGN UP</button>
           </form>
 
           <div className='coast'>

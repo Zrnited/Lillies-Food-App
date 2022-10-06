@@ -5,8 +5,7 @@ import Login from './pages/Login';
 import SignIn from './pages/SignIn';
 import DashboardPage from './pages/DashboardPage';
 import Profile from './pages/Profile'
-import Orders from './pages/Orders'
-import Carts from './pages/Carts'
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
   return (
@@ -16,10 +15,12 @@ function App() {
           <Route path='/' element={<LandingPage/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signin' element={<SignIn/>}/>
-          <Route path = '/dashboard' element={<DashboardPage/>}/>
+
+          <Route element={<ProtectedRoutes/>}>
+            <Route path = '/dashboard' element={<DashboardPage/>}/>
+          </Route>
+          
           <Route path = '/profile' element={<Profile/>}/>
-          <Route path = '/orders' element={<Orders/>}/>
-          <Route path = '/carts' element={<Carts/>}/>
         </Routes>
       </Router>
     </div>

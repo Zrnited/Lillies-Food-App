@@ -18,9 +18,13 @@ body, html {
     display: none;
 }
 
-.pic-container{
+.pic-container, .pic-container-signup{
     height: 900px;
     width: auto;
+}
+
+.pic-container-signup {
+    opacity: 0.9;
 }
 
 .pic-container img {
@@ -70,6 +74,7 @@ body, html {
     align-items: center;
     width: 600px;
     margin-left: 30px;
+    /* background-color: aqua; */
 }
 
 .heading-login h1:hover {
@@ -172,12 +177,12 @@ form button:hover{
         gap: 0px;
     }
 
-    .pic-container{
+    .pic-container, .pic-container-signup{
         height: 900px;
         width: auto;
     }
     
-    .pic-container img {
+    .pic-container img, .pic-container-signup img {
         height: 100%;
         width: auto;
         opacity: 0.7;
@@ -194,8 +199,61 @@ form button:hover{
 
 /* RESPONSIVENESS */
 
-@media screen and (max-width:1394px) {
-    .pic-container2{
+@media screen and (max-width:1413px) {
+    .pic-container {
+        /* height: 100%; */
+        width: 700px;
+        background: url('../assets/loginpic.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+    }
+
+    .pic-container-signup {
+        width: 700px;
+        background: url('../assets/signuppic.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+    }
+
+    .login-details-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 550px;
+        margin-left: 0px;
+        /* background-color: aqua; */
+    }
+
+    .pic-container img {
+        display: none;
+    }
+
+    .pic-container-signup img {
+        display: none;
+    }
+
+    .body {
+        justify-content: space-between;
+        gap: 0px;
+        padding-right: 40px;
+    }
+    
+}
+
+@media screen and (max-width:1310px) {
+    .body {
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width:1268px) {
+    /* .pic-container img {
+        display: block;
+    } */
+
+    .pic-container {
         bottom: 0;
         top: 0;
         left: 0;
@@ -207,24 +265,22 @@ form button:hover{
         background-position: center;
         background-repeat: no-repeat;
         display: block;
-    }
-
-    .coast span a{
-        color: #E2B887;
-    }
-    
-    .coast span {
-        color: #E2B887;
-    }
-
-    .pic-container2 img {
-        width: 100%;
-        height: 100%;
         opacity: 1;
     }
 
-    .pic-container {
-        display: none;
+    .pic-container-signup {
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        position: fixed;
+        background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url('../assets/signuppic.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        opacity: 1;
     }
 
     .login-details-container{
@@ -256,9 +312,21 @@ form button:hover{
         color: #E2B887;
     }
 
+    .coast span, .coast span a{
+        color: #E2B887;
+    }
+
     form {
         margin-top: 20px;
     }
+
+    .pic-container2 img {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+
+
 }
 
 @media screen and (max-width:1000px) {
@@ -354,5 +422,11 @@ form button:hover{
         margin-top: 0px;
         margin-bottom: 0px;
         font-size: 13px;
+    }
+}  
+
+@media screen and (max-width: 380px) {
+    .coast span {
+        margin-left: 50px;
     }
 }
